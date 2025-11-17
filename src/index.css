@@ -8,3 +8,10 @@
     display: block;
     margin: 0 auto;
 }
+
+.card_image {
+
+    img {
+        max-width: 100%;
+    }
+}

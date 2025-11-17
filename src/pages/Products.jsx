@@ -1,14 +1,16 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import { Link } from 'react-router-dom';
+
 export default function Products() {
     const productsApiUrl = 'https://fakestoreapi.com/products'
-    const [product, setProduct] = useState([])
+    const [products, setProducts] = useState([])
 
     function getProducts() {
         axios.get(productsApiUrl)
             .then(response => {
                 const productsList = response.data
-                setProduct(productsList)
+                setProducts(productsList)
             })
             .catch(error => console.error(error))
     }
@@ -22,7 +24,7 @@ export default function Products() {
             <h1>I nostri Articoli</h1>
             <div className="row g-3">
                 {
-                    product.map(item =>
+                    products.map(item =>
                         < div className="col-12 col-md-6 col-lg-4" key={item.id}>
                             <div className="card h-100">
                                 <div className="card-img-top p-3">
@@ -32,6 +34,7 @@ export default function Products() {
                                     <h3>{item.title}</h3>
                                     <span>{item.price}&euro;</span>
                                 </div>
+                                <Link className='btn btn-dark m-3' to={`/products/${item.id}`}>Visualizza l'articolo</Link>
                             </div>
                         </div>
                     )

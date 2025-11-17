@@ -2,10 +2,10 @@ import bancarellaImg from "../assets/img/polizia_locale_bancarella-2.jpg"
 export default function AboutUs() {
 
     return (
-        <div class="p-5 mb-4 bg-light ">
-            <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">Chi siamo</h1>
-                <p class="col fs-4">
+        <div className="p-5 mb-4 bg-light ">
+            <div className="container-fluid py-5">
+                <h1 className="display-5 fw-bold">Chi siamo</h1>
+                <p classNmae="col fs-4">
                     Fondata oltre 20 anni fa,
                     la nostra azienda nasce dalla passione per le bancarelle.
                     Sin dai primi giorni, l’obiettivo è stato offrire ai clienti soluzioni affidabili e innovative,
